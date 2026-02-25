@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #faf9f6;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header p {
+  color: #666;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+main {
+  max-width: 720px;
+  margin: 1rem auto 4rem;
+  padding: 0 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid #ddd;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+}
+
+tbody tr {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+tbody tr:not(.playing):hover {
+  background: #eee;
+}
+
+tbody tr.playing {
+  background: linear-gradient(
+    to right,
+    #b0d8c0 var(--progress, 0%),
+    #e0f0e8 var(--progress, 0%)
+  );
+}
+
+tbody tr.playing:hover {
+  background: linear-gradient(
+    to right,
+    #9ecdb4 var(--progress, 0%),
+    #cce6d8 var(--progress, 0%)
+  );
+}
+
+tbody tr.playing td {
+  font-weight: 600;
+}
+
+td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+td.num {
+  width: 2.5rem;
+  color: #aaa;
+  font-size: 0.85rem;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.play-pause-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+  color: #2a7a4f;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+}
+
+td.kn {
+  font-size: 1.05rem;
+}
+
+td.en {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 500px) {
+  header h1 { font-size: 1.4rem; }
+  td { padding: 0.5rem 0.4rem; }
+  td.kn { font-size: 0.95rem; }
+  td.en { font-size: 0.85rem; }
+}
